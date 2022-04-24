@@ -1,0 +1,24 @@
+doctype html
+html(lang='zh')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    meta(charset='utf8')
+    script(src='/javascripts/layout.js')
+    // javascript in head element
+    block head-script
+  body
+    div#navibar
+      a#logo(href='/') ChemTJ
+    div#main
+      div#vertmenu
+        a(href='/')#page-attribute 属性查询
+        a(href='/')#page-struct 结构查询
+        a(href='/')#page-reaction 化学反应
+        a(href='/')#page-category 分类索引
+        a(href='/wiki')#page-wiki wiki
+        a(href='/test')#page-test test
+      div#content
+        block content
+    // javascript in body element
+    block body-script

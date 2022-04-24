@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  if url == ''
+    div(style='margin:30%;')
+      input#cas-input
+      button#query-btn(onclick='func()') 查询
+  else
+    iframe#ex-page(width='90%',height='90%',style='border:solid;position:center;margin-left:5%;margin-top:3%')
+  script.
+    document.getElementById('ex-page').src = '#{url}';
+
+block body-script
+  script.
+    resizePage();
+    document.getElementById('page-wiki').className = 'active';
+    var content = document.getElementById('content');
+    func = () => {
+        window.location.href = 'wiki?' + 'cas=' +
+            document.getElementById('cas-input').value;
+    };

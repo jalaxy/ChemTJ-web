@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  - for (var i = 0; i < 10; i++)
+    p Hello, #{title}.
+
+block body-script
+  script.
+    resizePage();
