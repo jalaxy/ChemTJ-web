@@ -12,12 +12,16 @@ html(lang='zh')
       a#logo(href='/') ChemTJ
     div#main
       div#vertmenu
-        a(href='/')#page-attribute 属性查询
-        a(href='/')#page-struct 结构查询
-        a(href='/')#page-reaction 化学反应
-        a(href='/')#page-category 分类索引
-        a(href='/wiki')#page-wiki wiki
-        a(href='/test')#page-test test
+        div#hide-button (hide)
+        div#menu-tabs
+          a(href='/')#page-canvas 画图板
+          a(href='/')#page-attribute 属性查询
+          a(href='/')#page-struct 结构查询
+          a(href='/')#page-reaction 化学反应
+          a(href='/')#page-category 分类索引
+          a(href='/wiki')#page-wiki wiki
+          a(href='/test')#page-test static-test
+        div#tabs-bottom
       div#content
         block content
     // javascript in body element

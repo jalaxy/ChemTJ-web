@@ -20,27 +20,38 @@ body {
 
 #vertmenu {
     float: left;
-    background-color: #e1e1e1;
+    background-color: aliceblue;
+    border-radius: 0 10px 10px 0;
+    border: solid cadetblue;
+    border-left: none;
+    box-shadow: 1px 0px rgba(95, 158, 160, 0.5);
+}
+
+#vertmenu a {
+    display: block;
+    color: black;
+    padding: 10px 30px;
+    font-family: 18px sans-serif;
+    text-decoration: none;
+}
+
+#vertmenu a.active {
+    background-color: cadetblue;
+    color: white;
+}
+
+#vertmenu a:hover:not(.active) {
+    background-color: darkseagreen;
+    color: black;
+}
+
+#menu-tabs {
     overflow: auto;
 }
 
-    #vertmenu a {
-        display: block;
-        color: #000;
-        padding: 10px 30px;
-        font-family: 18px sans-serif;
-        text-decoration: none;
-    }
-
-        #vertmenu a.active {
-            background-color: cadetblue;
-            color: white;
-        }
-
-        #vertmenu a:hover:not(.active) {
-            background-color: #555;
-            color: white;
-        }
+#hide-button a:hover:not(.active) {
+    background-color: red;
+}
 
 #content {
     overflow: auto;
