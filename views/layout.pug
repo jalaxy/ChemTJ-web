@@ -11,8 +11,11 @@ html(lang='zh')
     div#navibar
       a#logo(href='/') ChemTJ
     div#main
+      div#show-button
+        img(src='/double-arrow-left.svg')#show-btn-img
       div#vertmenu
-        div#hide-button (hide)
+        div#hide-button
+          img(src='/double-arrow-left.svg')#hide-btn-img
         div#menu-tabs
           a(href='/')#page-canvas 画图板
           a(href='/')#page-attribute 属性查询
@@ -26,3 +29,8 @@ html(lang='zh')
         block content
     // javascript in body element
     block body-script
+    script.
+      showVert(getCookie('hide') == '');
+      window.addEventListener('resize', resizePage);
+      document.getElementById('hide-btn-img').addEventListener('click', () => { showVert(0) });
+      document.getElementById('show-btn-img').addEventListener('click', () => { showVert(1) });

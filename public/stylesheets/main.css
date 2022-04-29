@@ -49,8 +49,32 @@ body {
     overflow: auto;
 }
 
-#hide-button a:hover:not(.active) {
-    background-color: red;
+#hide-button img:hover {
+    background-color: darkseagreen;
+}
+
+#hide-button img {
+    float: right;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid cadetblue;
+}
+
+#show-button {
+    float: left;
+    display: none;
+}
+
+#show-button img {
+    border: solid cadetblue 2px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    transform: scale(-1);
+    cursor: pointer;
+}
+
+#show-button img:hover {
+    background-color: darkseagreen;
 }
 
 #content {
