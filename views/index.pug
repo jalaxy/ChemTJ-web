@@ -1,10 +1,38 @@
 extends layout
 
-block content
-  h1= title
-  - for (var i = 0; i < 10; i++)
-    p Hello, #{title}.
+block head-extension
+  link(rel='stylesheet', href='/stylesheets/index.css')
 
-block body-script
+block content
+  center#logo-img
+    img(src='/logo-img.png',height='300px',alt='logo')
+  div#intro
+    h1 ChemTJ 网页版 使用说明
+    p ChemTJ是一个化学数据查询与化学结构绘制的应用。主要功能有
+    ul
+      li
+        a(href='/') 结构式的绘制
+        p.
+          在这一个页面，可以进行。。。
+      li
+        a(href='/attr') 化学分子式属性的查询
+        p.
+          分子式属性的查询包括。。。
+      li
+        a(href='/') 化学反应的查询
+        p.
+          在化学反应的查询页面，通过。。。
+      li
+        a(href='/') 分类索引
+        p.
+          对于数据库中信息的查询，还可以从化学分子式与物质的分类的索引查询。
+          查询过程。。。
+      li
+        a(href='/wiki') 百科查询
+        p.
+          除了上述在数据库中的信息以外，还可以通过外部链接展示注册号对应物质的百科等详细资料。
+          通过这个页面。。。
+
+block body-extension
   script.
     resizePage();

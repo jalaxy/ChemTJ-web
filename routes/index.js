@@ -6,10 +6,11 @@ module.exports = (db) => {
 
     /* GET home page. */
     router.get('/', (req, res) => {
-        res.render('index', { title: '123' });
+        res.render('index', { title: 'ChemTJ' });
     });
 
     router.get('/attr', (req, res) => {
+        res.render('attr');
     });
 
     router.get('/wiki', (req, res) => {

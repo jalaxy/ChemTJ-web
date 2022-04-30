@@ -26,7 +26,9 @@ resizePage = () => {
     logo.style.lineHeight = navibarHeight + 'px';
     vertmenu.style.borderWidth = vertmenuBorderWidth + 'px';
     vertmenu.style.width = vertmenuWidth - vertmenuBorderWidth * 2 + 'px';
-    content.style.width = window.innerWidth - vertmenuWidth + 'px';
+    content.style.width = window.innerWidth -
+        (vertmenu.style.display == 'none' ?
+            hideButtonHeight - 2 * hideButtonMargin : vertmenuWidth) + 'px';
     content.style.height = window.innerHeight - navibarHeight + 'px';
     hideButton.style.height = hideButtonHeight + 'px';
     hideButtonImg.style.height = hideButtonHeight -
@@ -71,4 +73,5 @@ showVert = (show) => {
     setCookie('hide', 'true', show ? 0 : 1);
     document.getElementById('vertmenu').style.display = show ? 'unset' : 'none';
     document.getElementById('show-button').style.display = show ? 'none' : 'unset';
+    resizePage();
 }

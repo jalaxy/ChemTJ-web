@@ -5,20 +5,19 @@ html(lang='zh')
     link(rel='stylesheet', href='/stylesheets/main.css')
     meta(charset='utf8')
     script(src='/javascripts/layout.js')
-    // javascript in head element
-    block head-script
+    block head-extension
   body
     div#navibar
       a#logo(href='/') ChemTJ
     div#main
       div#show-button
-        img(src='/double-arrow-left.svg')#show-btn-img
+        img(src='/double-arrow-left.svg',alt='<<')#show-btn-img
       div#vertmenu
         div#hide-button
-          img(src='/double-arrow-left.svg')#hide-btn-img
+          img(src='/double-arrow-left.svg',alt='<<')#hide-btn-img
         div#menu-tabs
           a(href='/')#page-canvas 画图板
-          a(href='/')#page-attribute 属性查询
+          a(href='/attr')#page-attribute 属性查询
           a(href='/')#page-struct 结构查询
           a(href='/')#page-reaction 化学反应
           a(href='/')#page-category 分类索引
@@ -27,8 +26,7 @@ html(lang='zh')
         div#tabs-bottom
       div#content
         block content
-    // javascript in body element
-    block body-script
+    block body-extension
     script.
       showVert(getCookie('hide') == '');
       window.addEventListener('resize', resizePage);
