@@ -9,6 +9,10 @@ module.exports = (db) => {
         res.render('index', { title: 'ChemTJ' });
     });
 
+    router.get('/canvas', (req, res) => {
+        res.render('canvas', { title: '分子式绘图' });
+    })
+
     router.get('/attr', (req, res) => {
         res.render('attr');
     });

@@ -68,6 +68,7 @@ var server = app.listen(app.get('port'), function () {
 // handling SIGINT
 process.on('SIGINT', () => {
     con.end();
+    console.log('');
     console.log('Database disconnected.');
     server.close();
     console.log('Shutting down server...');

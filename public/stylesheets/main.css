@@ -48,11 +48,11 @@ body {
     overflow: auto;
 }
 
-#hide-button img:hover {
+#hide-button svg:hover {
     background-color: darkseagreen;
 }
 
-#hide-button img {
+#hide-button svg {
     float: right;
     cursor: pointer;
     border-radius: 5px;
@@ -64,7 +64,7 @@ body {
     display: none;
 }
 
-#show-button img {
+#show-button svg {
     border: solid cadetblue 2px;
     background-color: aliceblue;
     border-radius: 5px;
@@ -72,7 +72,7 @@ body {
     cursor: pointer;
 }
 
-#show-button img:hover {
+#show-button svg:hover {
     background-color: darkseagreen;
 }
 

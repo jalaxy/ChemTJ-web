@@ -1,0 +1,13 @@
+extends layout
+
+block head-extension
+  link(rel='stylesheet', href='/stylesheets/canvas.css')
+  script(src='/javascripts/canvas.js')
+
+block content
+  canvas#user-canvas
+
+block body-extension
+  script.
+    document.getElementById('page-canvas').className = 'active';
+    init();
